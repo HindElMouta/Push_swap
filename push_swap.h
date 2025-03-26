@@ -40,6 +40,7 @@ void		assign_index(t_stack *stack_a, int ac);
 int			is_sorted(t_stack *stack);
 void		tiny_sort(t_stack **stack);
 void		sort(t_stack **stack_a, t_stack **stack_b);
+void		small_sort(t_stack **a, t_stack **b);
 
 /* Position */
 
@@ -94,5 +95,8 @@ int			is_correct_input(char **av);
 int			is_digit(char c);
 int			is_sign(char c);
 int			nbstr_cmp(const char *s1, const char *s2);
+
+void	print_stack(t_stack *stack);
+
 
 #endif

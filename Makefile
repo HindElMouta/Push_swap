@@ -24,7 +24,9 @@ SRC		= main.c \
 		swap.c push.c rotate.c reverse_rotate.c \
 		sort_tiny.c sort.c \
 		position.c cost.c do_move.c \
-		utils.c
+		utils.c \
+		small_sort.c
+
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)
 OBJS	= $(addprefix $(OBJ_PATH), $(OBJ))
@@ -36,7 +38,7 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
 
 $(OBJ_PATH):
-	mkdir $(OBJ_PATH)
+	@mkdir -p $(OBJ_PATH)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)

@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+//faire pivoter la pile vers le haut
 static void	rotate(t_stack **stack)
 {
 	t_stack	*tmp;

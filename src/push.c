@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+//deplace le premenr element de src ver dest
 static void	push(t_stack **src, t_stack **dest)
 {
 	t_stack	*tmp;

@@ -64,6 +64,16 @@ static void	shift_stack(t_stack **stack_a)
 	}
 }
 
+void print_stack(t_stack *stack)
+{
+    while (stack)
+    {
+        printf("%d (Index: %d) -> ", stack->value, stack->index);
+        stack = stack->next;
+    }
+    printf("NULL\n");
+}
+
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
 	push_all_save_three(stack_a, stack_b);
@@ -77,3 +87,5 @@ void	sort(t_stack **stack_a, t_stack **stack_b)
 	if (!is_sorted(*stack_a))
 		shift_stack(stack_a);
 }
+
+

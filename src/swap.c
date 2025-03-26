@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+//echange les deux premier element de la pile
 static void	swap(t_stack *stack)
 {
 	int	tmp;
