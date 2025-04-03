@@ -3,20 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hinel-mo <hinel-mo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 15:28:41 by hinel-mo          #+#    #+#             */
-/*   Updated: 2025/03/25 15:28:41 by hinel-mo         ###   ########.fr       */
+/*   Updated: 2025/04/03 16:35:27 by hinel-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void push_min_to_b(t_stack **a, t_stack **b)
+static void	push_min_to_b(t_stack **a, t_stack **b)
 {
-	int lowest_pos = get_lowest_index_position(a);
-	int size = get_stack_size(*a);
+	int	lowest_pos;
+	int	size;
 
+	lowest_pos = get_lowest_index_position(a);
+	size = get_stack_size(*a);
 	if (lowest_pos <= size / 2)
 	{
 		while (lowest_pos-- > 0)
@@ -30,10 +32,11 @@ static void push_min_to_b(t_stack **a, t_stack **b)
 	do_pb(a, b);
 }
 
-void small_sort(t_stack **a, t_stack **b)
+void	small_sort(t_stack **a, t_stack **b)
 {
-	int size = get_stack_size(*a);
+	int	size;
 
+	size = get_stack_size(*a);
 	if (size == 4)
 	{
 		push_min_to_b(a, b);

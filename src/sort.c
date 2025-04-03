@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hinel-mo <hinel-mo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:46:08 by hinel-mo          #+#    #+#             */
-/*   Updated: 2025/02/12 17:46:08 by hinel-mo         ###   ########.fr       */
+/*   Updated: 2025/04/03 16:50:40 by hinel-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,14 +64,14 @@ static void	shift_stack(t_stack **stack_a)
 	}
 }
 
-void print_stack(t_stack *stack)
+void	print_stack(t_stack *stack)
 {
-    while (stack)
-    {
-        printf("%d (Index: %d) -> ", stack->value, stack->index);
-        stack = stack->next;
-    }
-    printf("NULL\n");
+	while (stack)
+	{
+		printf("%d (Index: %d) -> ", stack->value, stack->index);
+		stack = stack->next;
+	}
+	printf("NULL\n");
 }
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
@@ -87,5 +87,3 @@ void	sort(t_stack **stack_a, t_stack **stack_b)
 	if (!is_sorted(*stack_a))
 		shift_stack(stack_a);
 }
-
-

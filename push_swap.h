@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hinel-mo <hinel-mo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 16:51:05 by hinel-mo          #+#    #+#             */
-/*   Updated: 2025/04/03 14:53:57 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/03 16:41:58 by hinel-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,10 @@ char		**ft_split(const char *str, char sep);
 void		free_split(char **arr);
 int			get_argc(char **args);
 
-
 /* Error */
 
 void		exit_error(t_stack **stack_a, t_stack **stack_b);
+void		print_stack(t_stack *stack);
 
 /* Input Check */
 
@@ -99,8 +99,5 @@ int			is_correct_input(char **av);
 int			is_digit(char c);
 int			is_sign(char c);
 int			nbstr_cmp(const char *s1, const char *s2);
-
-void	print_stack(t_stack *stack);
-
 
 #endif
