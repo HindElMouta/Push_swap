@@ -84,6 +84,10 @@ void		free_stack(t_stack **stack);
 long int	ft_atoi(const char *str);
 void		ft_putstr(char *str);
 int			nb_abs(int nb);
+char		**ft_split(const char *str, char sep);
+void		free_split(char **arr);
+int			get_argc(char **args);
+
 
 /* Error */
 

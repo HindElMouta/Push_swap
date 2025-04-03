@@ -25,7 +25,8 @@ SRC		= main.c \
 		sort_tiny.c sort.c \
 		position.c cost.c do_move.c \
 		utils.c \
-		small_sort.c
+		small_sort.c \
+		ft_split.c
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)

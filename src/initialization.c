@@ -20,16 +20,13 @@ t_stack	*fill_stack_values(int ac, char **av)
 
 	stack_a = NULL;
 	nb = 0;
-	i = 1;
+	i = 0;
 	while (i < ac)
 	{
 		nb = ft_atoi(av[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
 			exit_error(&stack_a, NULL);
-		if (i == 1)
-			stack_a = stack_new((int)nb);
-		else
-			stack_add_bottom(&stack_a, stack_new((int)nb));
+		stack_add_bottom(&stack_a, stack_new((int)nb));
 		i++;
 	}
 	return (stack_a);
