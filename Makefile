@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/12 17:50:16 by hinel-mo          #+#    #+#              #
-#    Updated: 2025/04/03 14:51:49 by marvin           ###   ########.fr        #
+#    Updated: 2025/04/04 12:29:33 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,9 @@ SRC		= main.c \
 		position.c cost.c do_move.c \
 		utils.c \
 		small_sort.c \
-		ft_split.c
+		ft_split.c \
+		args_utils.c \
+		push_swap_logic.c
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)
