@@ -36,8 +36,9 @@ void	free_split(char **arr)
 
 char	**handle_split_args(char **av, int *free_args)
 {
-	char	**args = ft_split(av[1], ' ');
+	char	**args;
 
+	**args = ft_split(av[1], ' ');
 	if (!args || !args[0])
 		exit_error(NULL, NULL);
 	*free_args = 1;

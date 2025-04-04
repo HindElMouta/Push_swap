@@ -31,7 +31,7 @@ static int	have_duplicates(char **av)
 	int	i;
 	int	j;
 
-	i = 1;
+	i = 0;
 	while (av[i])
 	{
 		j = 1;
@@ -66,7 +66,7 @@ int	is_correct_input(char **av)
 	int	nb_zeros;
 
 	nb_zeros = 0;
-	i = 1;
+	i = 0;
 	while (av[i])
 	{
 		if (!arg_is_number(av[i]))
